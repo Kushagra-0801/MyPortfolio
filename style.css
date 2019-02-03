@@ -1,0 +1,100 @@
+/* Edit afterwords */
+
+img {
+    height: 10px;
+    width: 10px;
+}
+/* --*------*-- */
+
+body {
+    background: #f0f0f0;
+    height: 100%;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0vw;
+    /* padding-right: 1vw; */
+    text-align: center;
+}
+
+.intro {
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+}
+
+.intro div {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vh 0 5vh;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+
+.intro div h2 {
+    margin-top: -10vh;
+}
+
+.intro div, .intro div:before {
+    background: 50% 50% / cover;
+}
+
+.intro div::before {
+    bottom: 0;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url(assets/background.png);
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+.intro div * {
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin: 0;
+    padding: 1em;
+    z-index: 1;
+}
+
+#navbar {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    text-align: right;
+    z-index: 1;
+    width: 100vw;
+}
+
+#navbar li {
+    display: inline;
+}
+
+#navbar li a {
+    display: inline-block;
+    width: 7vw;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px 8px 16px;
+    text-align: center;
+}
+
+#navbar li a:hover {
+    background: #666666;
+}
